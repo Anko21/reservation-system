@@ -1,0 +1,1014 @@
+*{
+    margin:0;
+    padding:0;
+  }
+  .container {
+    background-color: white;
+    /* width: 100vw; */
+    height: 2900px;
+    display: grid;
+    grid-template-rows: 1fr 7fr 7.5fr 5.5fr 6.5fr 4fr;
+    grid-template-areas:
+    "header"
+    "hero"
+    "highlights"
+    "testimonials"
+    "about"
+    "footer";
+    font-family:MarkaziText;/************/
+  }
+  /* OK ~~~~~~~~~~~~HEADER~~~~~~~~~~~*/
+  .header {
+    grid-area: header;
+    background-color: white;
+    display:flex;
+    flex-flow: row wrap;
+    padding:10px;
+    align-items: center;
+    justify-content: center;
+    /* position:fixed;
+    left:0;
+    right:0;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;*/
+  }
+  .navbar{
+    display: flex;
+    flex-flow: row wrap;
+    list-style-type:none;
+  }
+  .nav-item {
+    padding:15px;
+    text-decoration: none;
+    color:#333333;
+    font-family:Karla;/************************************************/
+    font-size: 18px;
+    font-weight:bold;
+  }
+  .header a:hover{
+    font-size:20px;
+    font-weight:bolder;
+  }
+  .header a:active{
+    background-color: #495E57;
+    color:#EDEFEE;
+    border-radius: 5px;
+  }
+  /*OK~~~~~~~~~~~~HERO~~~~~~~~~~~*/
+  .hero{
+    grid-area: hero;
+    background-color: #495E57;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 0px 0 0 150px;
+  }
+  .heroInfo {
+    grid-column:1;
+    display:flex;
+    flex-flow: column wrap;
+    overflow: hidden;
+  }
+  .heroInfo h1{
+    color: #F4CE14;
+    font-size: 64px;
+    font-weight: medium;
+  }
+  .heroInfo h2, p{
+    color: #EDEFEE;
+    font-size: 40px;
+    font-weight: normal;
+  }
+  .heroInfo p{
+    padding-top: 10px;
+  }
+  .reservebtn{
+    padding-top: 10px;
+    margin:30px 0;
+  }
+  .heroInfo button{
+    background-color: #F4CE14;
+    border-radius: 16px;
+    width: 250px;
+    height:60px;
+    color:#333333;
+    font-family:Karla;
+    font-size: 24px;
+    font-weight:bold;
+  }
+  .hero >img{
+    grid-column: 2;
+    display:flex;
+    flex-wrap: wrap;
+    width:25em;
+    position: relative; 
+    top:100px;
+    max-width: 100%;
+    border-radius:16%;
+    margin:auto;
+    padding: 10px;
+  }
+  
+  /*~~~~~~~~~~~~HIGHLIGHTS~~~~~~~~~~~*/
+   .highlights{
+    grid-area: highlights;
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    grid-template-columns: auto;
+    padding:50px;
+    width:80vw;
+  }
+  .promoheading{
+    grid-row:1;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding:0px 200px
+  }
+  .promoheading h1{
+    font-weight: 800;
+    font-size: 20px;
+  }
+  .promoheading button{
+    background-color: #F4CE14;
+    border-radius: 16px;
+    width: 150px;
+    height:40px;
+    font-family:Karla;
+    font-size: 18px;
+    font-weight:bold;
+    /*align-items: center;*/
+    /*justify-content:center;*/
+  }
+  .promocard{
+    grid-row:2;
+    display: flex;
+    flex-flow:row wrap;
+    gap:10px
+  }
+  .promocard article {
+    display: flex;
+    flex-flow:column wrap;
+    justify-content: space-between;
+    background-color: #EDEFEE;
+    border-radius: 16px;
+    padding: 10px;
+    width:300px;
+    height: 400px;
+    margin:auto;
+    font-family: 'Karla';
+    /*max-width:100%;*/
+  }
+  .promocard article > img{
+    display:flex;
+    width:100%;
+  }
+  .promocard .promotitle{
+    grid-row:2;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    font-weight: bold;
+  }
+  .promotitle h1{
+    font-size: 16px;
+  }
+  .promotitle h2{
+    font-size: 16px;
+    color:#EE9972
+  }
+  .promocard p{
+    display: flex;
+    font-size: 16px;
+    color: #495E57;
+  }
+  .promocard button{
+    display: flex;
+    font-family: 'Karla';
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    justify-content: left;
+    align-items: center;
+  }
+  
+  /*~~~~~~~~~~~~TESTIMONIALS~~~~~~~~~~~*/
+  .testimonials {
+    grid-area: testimonials;
+    display:grid;
+    grid-template-rows: 1fr 4fr;
+    background-color: #FBDABB;
+    font-family: Karla;
+    color:#333333;
+  /*  justify-content: stretch;
+    align-items: center;*/
+  }
+  .testimonials h1{
+    grid-row:1;
+    font-weight:bolder;
+    font-size:20px;
+    margin:auto;
+    /*justify-content: center;*/
+  }
+  .testicards{
+    grid-row:2;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items:center;
+    padding:50px;
+    gap:10px;
+  }
+  .testicards article{
+    display: grid;
+    grid-template-rows: 1fr 3fr 2fr;
+    gap:5px;
+    background-color: #EE9972;
+    width:300px;
+    height: 200px;
+    max-width:100%;
+    padding:10px;
+    margin:auto;
+  }
+  .testititle {
+    grid-row:1;
+    display:flex;
+    margin:auto auto auto 0;
+  }
+  .testititle > img{
+    width:1em;
+    max-width: 100%;
+  }
+  .testititle h1{
+    font-weight: bold;
+    font-size:14px;
+    padding-right: 10px;
+  }
+  .testicustomer{
+    grid-row:2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .testicustomer >img{
+    width:7em;
+    max-width:100%;
+  }
+  .testicustomer h2{
+      font-weight: bold;
+      font-size:14px;
+      padding-bottom:-50px;
+      }
+  .testicards p{
+      grid-row:3;
+      font-weight: bold;
+      font-size:14px;
+      color: #333333;
+  }
+  /*~~~~~~~~~~~~ABOUT~~~~~~~~~~~*/
+  .about{
+    grid-area: about;
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    padding:50px;
+  }
+  .aboutInfo{
+    grid-column:1;
+    display:flex;
+    flex-flow:column wrap;
+    border-radius: 16px;
+    background-color: #495E57;
+    padding: 10px;
+  }
+  .aboutInfo h1{
+    color:#EDEFEE;
+    font-size: 40px;
+  }
+  .aboutInfo h2{
+    color:#EDEFEE;
+    font-size: 36px;
+  }
+  .aboutInfo p{
+    background-color:#EDEFEE;
+    border-radius: 16px;
+    padding: 25px;
+    color:#333333;
+    font-size: 18px;
+    font-weight:600;
+  }
+  .aboutImg{
+    grid-column: 2;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .aboutImg >img {
+    display:flex;
+    width:20em;
+    
+    border-radius:16%;
+
+    }
+    #A{
+      margin :0 0 0 20px ;
+    }
+    #B{
+      margin : -50px 0 0 200px ;
+    }
+  /*~~~~~~~~~~~~Footer~~~~~~~~~~~*/
+  .footer{
+    background-color: #495E57;
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    padding:10px;
+    align-items: center;
+  }
+  .footer >img {
+    grid-column: 1;
+    display:flex;
+    flex-wrap: wrap;
+    margin:auto;
+  }
+  .footerInfo {
+    grid-column: 2;
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .footerInfo ul{
+    display: flex;
+    flex-direction: column;
+    list-style:none;
+    padding-left: 10px;
+  }
+  .footerInfo a {
+    color: #edefee;
+    text-decoration: none;
+    font-family:Karla;
+    font-size:18px;
+    font-weight:medium;
+  }
+  .footernav a:hover {
+    color: #495E57;
+    background-color: #EDEFEE;
+  }
+  .footerInfo li {
+    color: #edefee;
+    text-decoration: none;
+    font-family:Karla;
+    font-size:18px;
+    font-weight:medium;
+  }
+  .footersocials a{
+    padding-left: 5px;
+  }
+  .footernav a:hover {
+    color: #495E57;
+    background-color: #EDEFEE;
+  }
+  .footersocials a:hover{
+    box-shadow: 5px 0px 5px #EE9972;
+  }
+  
+  /*~~~~~~~~~~~~FooterWhite~~~~~~~~~~~*/
+  .footerWhite{
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    width:100%;
+    padding:10px;
+    align-items: center;
+    background-color:#EDEFEE;
+  }
+  .footerWhite >img {
+    grid-column: 1;
+    display:flex;
+    flex-wrap: wrap;
+    margin:auto;
+  }
+  .footerWhiteInfo {
+    grid-column: 2;
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .footerWhiteInfo ul{
+    display: flex;
+    flex-direction: column;
+    list-style:none;
+    padding-left: 10px;
+  }
+  .footerWhiteInfo a {
+    color: #495E57;
+    text-decoration: none;
+    font-family:Karla;
+    font-size:18px;
+    font-weight:medium;
+  }
+  .footerWhiteInfo li {
+    color: #495E57;
+    text-decoration: none;
+    font-family:Karla;
+    font-size:18px;
+    font-weight:medium;
+  }
+  .footerWhitersocials a{
+    padding-left: 5px;
+  }
+  .footeWhiternav a:hover {
+    background-color: #495E57;
+    color: #EDEFEE;
+  }
+  .footerWhitersocials a:hover{
+    box-shadow: 5px 0px 5px #EE9972;
+  }
+  /*~~~~~~~~~~~~ReservationFom~~~~~~~~~~~*/
+  .reservepage{
+    display:grid;
+    grid-template-rows: 3fr 1r; 
+    width:100%;
+  }
+  .reserve{
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    background-color: #495E57;
+    padding: 20px 0 20px 150px;
+  }
+  .reserveside{
+    grid-column: 1;
+    display:flex;
+    flex-flow: column wrap;
+  }
+  .reserveside h1{
+    color: #F4CE14;
+    font-size: 64px;
+    font-weight: medium;
+  }
+  .reserveside p{
+    color: #EDEFEE;
+    font-size: 40px;
+    font-weight: normal;
+    padding-bottom:10px;
+  }
+  .reserveside >img{
+    display:flex;
+    width:20em;
+    max-width: 100%;
+    border-radius:16%;
+  }
+  .reserveside #Areserve{
+    margin-left:-20px;
+  }
+  .reserveside #Breserve{
+    margin-top: -20px;
+    margin-left:100px;
+  }
+  .reserveform{
+    grid-column: 2;
+    display: flex;
+    flex-flow: column wrap;
+    font-family: 'Karla';
+    font-weight: bolder;
+    color: #EDEFEE;
+    padding-left:50px;
+    margin:100px 0 100px 0;
+    align-items: flex-start;
+  }
+  .reserveform h1{
+    padding-bottom:20px;
+    font-size: 20px;
+  }
+  .date input{
+    margin: 10px 0 15px 0;
+    border: none;
+    color: #333333;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 16px;
+    padding: 5px;
+    width:130px
+  }
+  .date input::placeholder {
+    color:#333333;
+    padding:5px;
+  }
+  .reserveform select{
+    display:flex;
+    color: #333333;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 16px;
+    padding: 5px;
+    margin : 10px 0 0px 0 ;
+  }
+  .reserveform option{
+    border-radius: 16px;
+    color: #333333;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .reserveform .seating{
+    margin-left: 10px;
+    margin-bottom: 20px;
+  }
+  .seating .seatingradio {
+    font-size: 16px;
+    font-weight: normal;
+    margin-left: 10px;
+    margin-top:5px
+  }
+  .seatin input{
+    margin-left:15px
+  }
+  .seatout input {
+    margin-left: 22px
+  }
+  .reserveformButton {
+    background-color: #F4CE14;
+    border-radius: 16px;
+    width: 200px;
+    height:40px;
+    color:#333333;
+    font-family:Karla;
+    font-size: 18px;
+    font-weight:bold;
+    margin:auto;
+  }
+  /*~~~~~~~~~~~~Login~~~~~~~~~~~*/
+  .loginpage{
+    display:grid;
+    grid-template-rows: 1fr 3fr 1r;
+  }
+  .loginforms{
+    background-color: #495E57;
+    padding: 20PX 10px 10px 150px;
+  }
+  .logintitle{
+    grid-row:1;
+    background-color: #495E57;
+  }
+  .logintitle h1{
+    color: #F4CE14;
+    font-size: 64px;
+    font-weight: medium;
+  }
+  .logintitle p{
+    color: #EDEFEE;
+    font-size: 40px;
+    font-weight: normal;
+    padding-bottom:10px;
+  }
+  .forms{
+    grid-row:2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top:20px
+  }
+  .login{
+    grid-column:1fr;
+    display:flex;
+    flex-flow: column wrap;
+    font-family: 'Karla';
+    font-weight: bolder;
+    color: #EDEFEE;
+  }
+  .login h2{
+    font-size: 20px;
+  }
+  .logincouples{
+    display:flex;
+    flex-direction: column;
+    padding:15px 0px 15px 0px;
+  }
+  .loginfields{
+    padding-bottom: 20px;
+  }
+  .login input{
+    color: #333333;
+    border-radius: 16px;
+    font-family: 'Karla';
+    font-weight: bold;
+    font-size: 16px;
+    padding-left:10px;
+    height:30px;
+    max-width: 300px;
+  }
+  .login label{
+    font-family: 'Karla';
+    font-weight: 500;
+    font-size: 16px;
+    padding-left:10px;
+  }
+  .loginbutton{
+    grid-column: 2;
+    background-color: #F4CE14;
+    border-radius: 16px;
+    width: 200px;
+    height:50px;
+    color:#333333;
+    font-family:Karla;
+    font-size: 18px;
+    font-weight:bold;
+    margin:10px;
+  }
+  .signup{
+    grid-column: 2;
+  }
+  .signupinfo{
+    font-family: 'Karla';
+    font-weight: bolder;
+    color: #EDEFEE;
+  }
+  .signupinfo h2{
+    font-size: 20px;
+    padding-bottom:20px;
+  }
+  .signupcouples{
+    display:flex;
+    flex-direction: row;
+  }
+  .signupinfo input{
+    color: #333333;
+    border-radius: 16px;
+    font-family: 'Karla';
+    font-weight: bold;
+    font-size: 16px;
+    padding-left:10px;
+    height:30px;
+    min-width: 250px;
+  }
+  .signupinfo label{
+    font-family: 'Karla';
+    font-weight: bold;
+    font-size: 20px;
+    padding:10px;
+
+  }
+  .signupinfo span{
+    font-family: 'Karla';
+    font-weight: 500;
+    font-size: 18px;
+    padding-left:10px;
+    padding-top:20px;
+    color:#EE9972;
+    
+  }
+  .signupinfo textarea{
+    border-radius: 16px;
+    color: #333333;
+    font-family:Karla;
+    font-weight: bold;
+    font-size: 16px;
+    padding:15px;
+    margin-top:15px;
+  }
+  .signupbutton{
+    grid-column: 2;
+    background-color: #F4CE14;
+    border-radius: 16px;
+    width: 200px;
+    height:50px;
+    color:#333333;
+    font-family:Karla;
+    font-size: 18px;
+    font-weight:bold;
+    margin:10px;
+  }
+  /*~~~~~~~~~~~~Payment~~~~~~~~~~~*/
+  .paymentpage{
+    display:grid;
+    grid-template-rows: 3fr 1r;
+  }
+  .payment{
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    background-color: #495E57;
+    align-items: center;
+    padding: 20px 0 20px 150px;
+  }
+  .payside{
+    grid-column:1;
+    display:flex;
+    flex-flow: column wrap;
+  }
+  .paytitle h1{
+    color: #F4CE14;
+    font-size: 64px;
+    font-weight: medium;
+  }
+  .paytitle p{
+    color: #EDEFEE;
+    font-size: 40px;
+    font-weight: normal;
+    padding-bottom:10px;
+  }
+  .paytitle h3{
+    color: #EDEFEE;
+    font-size: 32px;
+    font-weight: normal;
+    padding-bottom:10px;
+  }
+  .payside fieldset{
+    background-color: #FBDABB;
+    border-radius: 16px;
+    border-color: #EE9972;
+    border-style: solid;
+    width:50%;
+    margin-bottom: 20px;
+  }
+  #paybookingconf p{
+    color: #333333;
+    font-family: 'Karla';
+    font-weight: bold;
+    font-size: 22px;
+    padding-left:10px;
+    padding-top:10px;
+    margin-bottom:10px;
+  }
+  .payside textarea{
+    color: #333333;
+    border-radius: 16px;
+    font-family: 'Karla';
+    font-weight: bold;
+    font-size: 18px;
+    padding:10px;
+    width:50%
+  }
+  .payform{
+    grid-column: 2;
+    display:flex;
+    flex-flow:column wrap;
+    color: #EDEFEE;
+  }
+  .payform h3{
+    font-size: 32px;
+    padding-bottom: 30px;
+    font-weight: normal;
+  }
+  .payform input{
+    border-radius: 16px;
+    font-family: 'Karla';
+    font-weight: bold;
+    font-size: 16px;
+    padding-left:10px;
+    height:30px;
+    margin:0 auto 0  0;
+  }
+  .payform label{
+    font-family: 'Karla';
+    padding:5px;
+    font-size: 16px;
+  }
+  .payfield{
+    display:flex;
+    flex-flow: column wrap;
+  }
+  .payfield span{
+    font-family: 'Karla';
+    font-weight: 500;
+    font-size: 18px;
+    padding-top:5px;
+    padding-left:5px;
+    color:#EE9972;
+  }
+  .paycvv{
+    display:flex;
+    flex-flow: row wrap;
+  }
+  .payconfirmation{
+    display:flex;
+    flex-flow: column wrap;
+    padding:10px;
+  }
+  .payconf{
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+  }
+  .payform button{
+    grid-column: 2;
+    background-color: #F4CE14;
+    border-radius: 16px;
+    width: 150px;
+    height:40px;
+    color:#333333;
+    font-family:Karla;
+    font-size: 18px;
+    font-weight:bold;
+    margin: 0 60px 0 60px;
+  }
+
+  /* span{
+    color:red;
+    display : none;
+  }
+  input  :invalid[focused="true"] ~ span{
+    display: block;
+    border:2px solid red;
+  } */
+  /*~~~~~~~~~~~~Confirmation~~~~~~~~~~~*/
+
+  @media (max-width:920px) {
+    .container {
+      height: 3500px;
+    }
+    .navbar{
+      margin:auto;
+    }
+    .hero{
+      grid-area: hero;
+      display:flex;
+      padding:20px;
+      position:relative;
+      align-items: center;
+      justify-content: center;
+      margin: auto;}
+   
+     .hero::before {
+      content: '';
+      position:absolute;
+      inset:0;
+      background-image: url(./assets/restaurantfood.jpg);
+      background-repeat: repeat;
+      background-attachment:local;
+      background-position: center center;
+      background-size: cover;
+      opacity:0.4;
+    }
+  
+    .heroInfo{
+      padding:20px;
+      margin:auto;
+    }
+    .heroInfo h1{
+      font-size: 40px;
+      position:relative;
+    }
+    .heroInfo h2{
+      font-size: 36px;
+      position:relative;
+    }
+    .heroInfo p{
+      font-size: 32px;
+      position:relative;
+    }
+    .heroInfo button{
+      height:5vh;
+      position:relative;
+      font-size: 18px;
+    }
+    .hero >img{
+      width:0px;
+    }
+    .loginforms{
+      padding: 10px;
+    }
+    .promoheading{
+      flex-flow: column wrap;
+      justify-content: center;
+      padding:0px;
+    }
+    .promocard{
+      gap:10px;
+    }
+    .testicards{
+      padding:10px;
+    }
+    .about{
+      display:grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns:repeat(2,1fr);
+    }
+    .aboutInfo{
+      grid-row:1;
+      grid-column: 1 / span 2;
+    }
+    .aboutInfo .details{
+      padding: 10px;
+    }
+    .aboutImg{
+      grid-row:2;
+      grid-column: 1 / span 2;
+      display:flex;
+      flex-direction: row;
+      padding:10px;
+    }
+    #A,#B{
+      height: 200px;
+      margin: -10px auto 20px auto;
+    }
+    .footer >img {
+      margin:0;
+    }
+    .footerInfo ul{
+      padding: 10px;
+    }  
+    .footerWhite >img {
+      margin:0;
+    }
+    .footerWhiteInfo ul{
+      padding: 10px;
+    }
+    .reserve{
+      display: flex;
+      flex-flow:column wrap;
+      padding:10px;
+      position:relative;
+    }
+    .reserve::before {
+      content: '';
+      position:absolute;
+      inset:0;
+      background-image: url(./assets/restaurant.jpg);
+      background-repeat: repeat;
+      background-attachment:local;
+      background-position: center center;
+      background-size: cover;
+      opacity:0.4;}
+
+      .reserveside{
+        display: flex;
+        flex-flow:row wrap;
+      }
+    .reserveside h1{
+      font-size: 40px;
+      position:relative;
+    }
+    .reserveside p{
+      font-size: 36px;
+      position:relative;
+    }
+    .reserveside >img{
+     width:0px;
+    }
+
+    .reserveform{
+      margin-top:25px;
+      align-items: flex-start;
+      padding-left:20px;
+      position:relative;
+    }
+    .reserveform select{
+      padding: 5px;
+      margin : 0px;
+    }
+    .reserveform button {
+      margin:auto;
+    }
+    .loginforms{
+      background-color: #495E57;
+      padding: 40px;
+    }
+    .forms{
+      display: flex;
+      flex-direction:column;
+      background-color: #495E57;
+    }  
+    .signup{
+    padding-top:50px;
+    }
+    .signupcouples{
+      display:flex;
+      flex-direction: column;
+    }
+    .payment{
+      display: flex;
+      flex-flow:column wrap;
+      padding: 20px 20px 20px 20px;
+    }
+    .payside{
+      grid-row:1;
+      display:flex;
+      flex-flow:column wrap;
+    }
+    .paytitle {
+      display:flex;
+      flex-flow:column wrap;
+    }
+    .paytitle h1{
+      padding-top: 30px;
+      font-size: 40px;
+    }
+    .paytitle p{
+      font-size: 32px;
+    }
+    .payment h3{
+      padding-top: 30px;
+      font-size: 30px;
+    }
+    .payside textarea{
+      margin:auto;
+
+    }
+    .payaddinfo fieldset{
+      background-color: #FBDABB;
+      border-radius: 16px;
+      width:100%
+    }
+    .payaddinfo textarea{
+      width:100%
+    }
+
+  }

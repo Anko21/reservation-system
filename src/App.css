@@ -1,0 +1,950 @@
+*{
+    margin:0;
+    padding:0;
+  }
+.container {
+    display: grid;
+    height: 1500px;
+    grid-template-rows: 1fr 6fr 6.5fr 4.5fr 5.5fr 2fr;
+    grid-auto-columns: auto;
+    grid-template-areas:
+    "header"
+    "hero"
+    "highlights"
+    "testimonials"
+    "about"
+    "footer";
+    font-family:MarkaziText;/************/
+  }
+/*Header*/
+.header{
+    grid-area: header;
+    display: inline-flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding:0.5em;
+    justify-content: space-evenly;
+}
+#logo{
+    width:15vw;
+}
+.navbar{
+    display:inline-flex;
+    flex-flow: row wrap;
+}
+.nav-item{
+    text-decoration: none;
+    color:#333333;
+    font-family:Karla;
+    font-size: 18px;
+    font-weight:bold;
+    justify-items: stretch;
+    padding-left:1em;
+}
+.header a:hover{
+    color: #F4CE14;
+}
+.header a:active{
+    color: #495E57;
+    font-weight:bolder;
+}
+  /*Hero*********************************************/
+.hero{
+    grid-area: hero;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-auto-rows: auto;
+    background-color: #495E57;
+    align-items: center;
+    padding: 0 5em 0 5em;
+}
+.heroInfo{
+    grid-column: 1/span 5;
+    display:flex;
+    flex-flow: column wrap;
+    overflow: hidden;
+}
+.heroInfo h1{
+    color: #F4CE14;
+    font-size: 64px;
+    font-weight:bold;
+}
+.heroInfo h2, p{
+    color: #EDEFEE;
+    font-size: 40px;
+    font-weight: normal;
+}
+.heroInfo p{
+    padding-top: 1em;
+}
+button{
+    padding:0.5em;
+    background-color: #F4CE14;
+    border-radius: 16px;
+    color:#333333;
+    font-family:Karla;
+    font-size: 24px;
+    font-weight:bold;
+}
+.reservebtn button{
+    margin-top:0.5em;
+}
+.heroImg{
+    grid-column: 6/span 6;
+    width:25vw;
+    border-radius:16%;
+    position:relative;
+    top:5em;
+}
+/*Highlights*****************************/
+.highlights{
+    grid-area: highlights;
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    grid-template-columns: auto;
+    margin:5em;
+  }
+.promoheading{
+    grid-row:1;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+ }
+.promoheading h1{
+    font-weight: bolder;
+    font-size: 40px;
+}
+.promocard{
+    grid-row:2;
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: space-between;
+}
+.promocard section{
+    background-color: #EDEFEE;
+    font-family: 'Karla';
+    border-radius: 16px;
+    padding:0.5em;
+    width:20vw;
+}
+.promoImg{
+    width:100%;
+    height:auto;
+}
+.promotitle{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.promotitle h1{
+    font-size: 16px;
+}
+.promotitle h2{
+    font-size: 16px;
+    color:#EE9972
+}
+.promocard p{
+    display: flex;
+    font-size: 16px;
+    color: #495E57;
+    margin: 0.5em;
+}
+.promocard button{
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+}
+/*Testimonials********************************************/
+.testimonials {
+    grid-area: testimonials;
+    display:grid;
+    grid-template-rows: 1fr 2fr;
+    background-color: #FBDABB;
+    font-family: Karla;
+    color:#333333;
+  }
+  .testimonials h1{
+    grid-row:1;
+    font-weight:bolder;
+    font-size:20px;
+    margin:auto;
+  }
+  .testicards{
+    grid-row:2;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin:0 5em 2em 5em;
+    gap:1em;
+  }
+  .testicards section{
+    background-color: #EE9972;
+    border-radius: 16px;
+    padding:0.5em;
+    width:20vw;
+    height: fit-content;
+  }
+  .testititle {
+    display: flex;
+    margin:1em 0 1em 0;
+    align-items: center;
+    justify-content: stretch;
+  }
+  .star{
+    display:flex;
+    flex-direction: row;
+  }
+  .star>img{
+    width: 1.5em;
+    height: auto;
+  }
+  .testititle h1, h2{
+    font-weight: bold;
+    font-size:14px;
+  }
+  .testicustomer{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .testicustomer >img{
+    width:30%;
+  }
+  .testicards p{
+      grid-row:3;
+      font-weight: bold;
+      font-size:14px;
+      color: #333333;
+  }
+/*~~~~~~~~~~~~ABOUT~~~~~~~~~~~*/
+.about{
+    grid-area: about;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1em 5em 1em 5em;
+    align-items: center;
+}
+  .aboutImg{
+    grid-column: 2;
+  }
+  .aboutImgA img {
+    width:60%;
+    border-radius:16%;
+    }
+  .aboutImgB img {
+    width:60%;
+    border-radius:16%;
+    margin-left:12em;
+    margin-top:-2em
+    }
+  .aboutInfo{
+    grid-column: 1;
+    border-radius: 16px;
+    background-color: #495E57;
+    padding: 1em;
+    margin:2em;
+    color:#EDEFEE;
+  }
+  .aboutInfo h1{
+    font-size: 40px;
+  }
+  .aboutInfo h2{
+    font-size: 36px;
+  }
+  .aboutInfo p{
+    background-color:#EDEFEE;
+    border-radius: 16px;
+    padding: 1em;
+    margin:0.5em;
+    color:#333333;
+    font-size: 18px;
+    font-weight:bold;
+  }
+
+ /*~~~~~~~~~~~~Footer~~~~~~~~~~~*/
+ .footer{
+    grid-area: footer;
+    background-color: #495E57;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    align-items: center;
+    padding:auto 5em auto 5em;
+  }
+  .footer >img {
+    grid-column: 1 / span 3;
+    width:40%;
+    margin:auto;
+  }
+  .footerInfo {
+    grid-column: 4 / span 11;
+    display: flex;
+    flex-flow: row wrap;
+    padding:1em;
+    gap:2em;
+  }
+  .footerInfo ul{
+    display: flex;
+    flex-direction: column;
+    list-style:none;
+  }
+  .footerInfo a {
+    color: #edefee;
+    text-decoration: none;
+    font-family:Karla;
+    font-size:18px;
+    font-weight:medium;
+  }
+  .footernav a:hover {
+    color: #495E57;
+    background-color: #EDEFEE;
+  }
+  .footerInfo li {
+    color: #edefee;
+    text-decoration: none;
+    font-family:Karla;
+    font-size:18px;
+    font-weight:medium;
+  }
+  .footersocials a{
+    padding: 0.1em;
+  }
+  .footernav a:hover {
+    color: #495E57;
+    background-color: #EDEFEE;
+  }
+  .footersocials a:hover{
+    box-shadow: 5px 0px 5px #EE9972;
+  }
+  /*~~~~~~~~~~~~ReservationForm~~~~~~~~~~~*/
+  .reservePage{
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+  }
+  .reserve{
+    grid-row:1;
+    display:grid;
+    grid-template-columns: repeat(12,1fr);
+    background-color: #495E57;
+    padding:1em 5em 1em 5em;
+  }
+  .reserveLeftSide{
+    grid-column: 1 / span 6;
+  }
+  .reserveLeftSide h1{
+    color: #F4CE14;
+    font-size: 64px;
+    font-weight: medium;
+  }
+  .reserveLeftSide p{
+    color: #EDEFEE;
+    font-size: 40px;
+    font-weight: normal;
+  }
+  .reserveLeftSide >img{
+    width:60%;
+    border-radius:16%;
+  }
+  .reserveLeftSide #ImgB{
+    margin-left:7em;
+    margin-top:-2em
+  }
+  .reserveForm{
+    grid-column: 7 / span 12;
+    display: flex;
+    flex-flow: column wrap;
+    font-family: 'Karla';
+    font-weight: bolder;
+    color: #EDEFEE;
+    margin:auto auto auto 1em;
+  }
+   .reserveForm h1{
+    font-size: 20px;
+    padding-bottom:0.5em;
+  }
+  .reserveForm .selection{
+    padding: 0.5em;
+  }
+  .selection input{
+    border: none;
+    border-radius: 16px;
+    color: #495E57;
+    padding:0.2em;
+    font-weight: bold;
+    font-size: 16px;
+    text-align:justify;
+  }
+  /* .reserveForm select:focus:invalid {
+    border: 2px solid red;
+  }
+   .reserveForm input:focus:invalid{
+     border: 2px solid red
+  }
+  .reserveForm input:not(:focus):not(:placeholder-shown):invalid{
+    border: 2px solid red
+ }  */
+
+  .selection select{
+    border: none;
+    border-radius: 16px;
+    color: #495E57;
+    padding:0.2em;
+    font-weight: bold;
+    font-size: 16px;
+    text-align:justify;
+  }
+  .selection .seatin, .seatout{
+    display:flex;
+    flex-flow: row wrap;
+    font-size: 16px;
+    font-weight: normal;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .reserveformButton {
+    padding:0.2em;
+    background-color: #F4CE14;
+    border-radius: 16px;
+    color:#333333;
+    font-family:Karla;
+    font-size: 18px;
+    font-weight:bold;
+    margin-top:1em;
+  }
+    /*~~~~~~~~~~~~FooterWhite~~~~~~~~~~~*/
+    .footerWhite{
+      grid-row:2;
+      display: grid;
+      grid-template-columns: repeat(12,1fr);
+      align-items: center;
+      padding:auto 5em auto 5em;
+      background-color:#EDEFEE;
+    }
+    .footerWhite >img {
+      grid-column: 1 / span 3;
+      width:40%;
+      margin:auto;
+      padding:1em;
+    }
+    .footerWhiteInfo {
+      grid-column: 4 / span 11;
+      display: flex;
+      flex-flow: row wrap;
+      padding:1em;
+      gap:2em;
+    }
+    .footerWhiteInfo ul{
+      display: flex;
+      flex-direction: column;
+      list-style:none;
+    }
+    .footerWhiteInfo a {
+      color: #495E57;
+      text-decoration: none;
+      font-family:Karla;
+      font-size:18px;
+      font-weight:medium;
+    }
+    .footerWhiteInfo li {
+      color: #495E57;
+      text-decoration: none;
+      font-family:Karla;
+      font-size:18px;
+      font-weight:medium;
+    }
+    .footerWhitersocials a{
+      padding: 0.1em;
+    }
+    .footeWhiternav a:hover {
+      background-color: #495E57;
+      color: #EDEFEE;
+    }
+    .footerWhitersocials a:hover{
+      box-shadow: 5px 0px 5px #EE9972;
+    }
+  /*~~~~~~~~~~~~Login~~~~~~~~~~~*/
+  .loginPage{
+    display:grid;
+    grid-template-rows: 3fr 1fr;
+  }
+  .loginSignup{
+    grid-row: 1;
+    display:grid;
+    grid-template-rows: 1fr 3fr;
+    background-color: #495E57;
+    padding: 2em 5em 2em 5em;
+  }
+  .loginTitle{
+    grid-row:1;
+  }
+  .loginTitle h1{
+    color: #F4CE14;
+    font-size: 64px;
+    font-weight: medium;
+  }
+  .loginTitle p{
+    color: #EDEFEE;
+    font-size: 40px;
+    font-weight: normal;
+  }
+  .clientForms{
+    grid: row 2px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .signup{
+    grid-column: 1;
+  }
+  .loginSignup h2{
+    font-size: 20px;
+    padding-bottom:20px;
+    color: #EDEFEE;
+  }
+  .login{
+    grid-column: 2;
+    margin-left:5em;
+  }
+  .signupcouples{
+    display:flex;
+    flex-flow:row wrap;
+    gap:1em;
+    padding-bottom:1em;
+  }
+  .loginSignup label{
+    font-family: 'Karla';
+    font-weight: normal;
+    font-size: 18px;
+    color:#EDEFEE;
+  }
+  .loginSignup input{
+    border: none;
+    border-radius: 16px;
+    color: #495E57;
+    padding:0.2em;
+    font-weight: bold;
+    font-size: 16px;
+    text-align:justify;
+    margin-top:0.3em;
+  }
+
+  .loginSignup span{
+    font-family: 'Karla';
+    font-weight: bolder;
+    font-size: 18px;
+    color:#EE9972;
+
+  }
+  .loginSignup textarea{
+    border-radius: 16px;
+    color: #333333;
+    font-family:Karla;
+    font-weight: bold;
+    font-size: 16px;
+    padding:15px;
+    margin-top:15px;
+  }
+  .signLogButton{
+    font-size: 18px;
+    margin-top:1em;
+  }
+  .loginfields{
+    padding-bottom:1em;
+  }
+  /*~~~~~~~~~~~~UserDetails~~~~~~~~~~~*/
+  .userDetailsPage{
+    display:grid;
+    grid-template-rows: 3fr 1fr;
+  }
+  .userDetails{
+    grid-row: 1;
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    background-color: #495E57;
+    padding: 2em 5em 2em 5em;
+  }
+  .tittleRow1{
+    grid-row:1;
+  }
+  .tittleRow1 h1{
+    color: #F4CE14;
+    font-size: 64px;
+    font-weight: medium;
+  }
+  .bookingDetails{
+    grid-row:2;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .confirmedDetails{
+    grid-column: 1;
+  }
+  .confirmedDetails h3{
+    color: #EDEFEE;
+    font-size:20px;
+    font-weight: bold;
+    margin-bottom: 1em;
+  }
+  .bookingConfDetails{
+    background-color: #FBDABB;
+    border-radius: 16px;
+    border-color: #EE9972;
+    border-style: solid;
+    width:max-content;
+  }
+  .bookingConfDetails p {
+    color: #333333;
+    font-family: 'Karla';
+    font-weight: lighter;
+    font-size: 18px;
+    padding:0.5em;
+  }
+  .userDetailsForm{
+    grid-column:2;
+    display:flex;
+    flex-flow: column wrap;
+    gap:1em;
+  }
+  .userDetailsForm h3{
+    color: #EDEFEE;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 1em;
+  }
+  .userDetailsForm label{
+    font-family: 'Karla';
+    font-weight: normal;
+    font-size: 18px;
+    color:#EDEFEE;
+  }
+  .userDetailsForm input{
+    border: none;
+    border-radius: 16px;
+    color: #495E57;
+    padding:0.3em;
+    font-weight: bold;
+    font-size: 16px;
+    text-align:justify;
+    margin-top:0.3em;
+  }
+  .userDetailsForm textarea{
+    color: #333333;
+    border-radius: 16px;
+    font-family: 'Karla';
+    font-weight: bold;
+    font-size: 18px;
+    padding:0.5em;
+    width:40%
+  }
+  .userDetailsForm span{
+    font-family: 'Karla';
+    font-weight: bolder;
+    font-size: 18px;
+    color:#EE9972;
+  }
+  .userDetailsForm button{
+    font-size: 18px;
+    margin-top:1em;
+  }
+  /*~~~~~~~~~~~~Payment~~~~~~~~~~~*/
+  .paymentPage{
+    display:grid;
+    grid-template-rows: 3fr 1fr;
+  }
+  .payment{
+    grid-row: 1;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    background-color: #495E57;
+    padding: 2em 5em 2em 5em;
+  }
+  .paymentRow1{
+    grid-row:1;
+  }
+  .payTitle h1{
+    color: #F4CE14;
+    font-size: 64px;
+    font-weight: medium;
+  }
+  .payform{
+    grid-column: 2;
+    display:flex;
+    flex-flow:column wrap;
+    color: #EDEFEE;
+  }
+  .payform h3{
+    font-size: 32px;
+    font-weight: normal;
+    padding-bottom: 0.5em;
+  }
+  .payform input{
+    border: none;
+    border-radius: 16px;
+    color: #495E57;
+    padding:0.3em;
+    font-weight: bold;
+    font-size: 16px;
+    text-align:justify;
+    margin-top:0.3em;
+    width:max-content;
+  }
+  .payfield{
+    display:flex;
+    flex-flow: column wrap;
+  }
+  .payform label{
+    font-family: 'Karla';
+    font-weight: normal;
+    font-size: 18px;
+    color:#EDEFEE;
+  }
+  .payfield span{
+    font-family: 'Karla';
+    font-weight: bolder;
+    font-size: 18px;
+    color:#EE9972;
+  }
+  .paycvv{
+    display:flex;
+    flex-flow: row wrap;
+    gap:1em;
+  }
+  .payconf{
+    display:flex;
+    flex-direction: row;
+  }
+  .payButton{
+    font-size: 18px;
+    margin-top:1em;
+  }
+
+
+@media (max-width:920px) {
+    .container {
+        height: 500vh;
+    }
+    .header{
+        display: flex;
+        flex-direction: column;
+        padding:1em;
+        gap:0;
+    }
+    #logo{
+        width:30vw;
+    }
+    .nav-item{
+        padding-left:1em;
+    }
+    .hero{
+        position:relative;
+        align-items: center;
+        justify-content: center;
+        padding:1em
+      }
+    .hero::before {
+        content: '';
+        position:absolute;
+        inset:0;
+        background-image: url(./assets/restaurantfood.jpg);
+        background-repeat: repeat;
+        background-attachment:local;
+        background-position: center center;
+        background-size: cover;
+        opacity:0.2;
+      }
+      .hero >img{
+        width:0px;
+      }
+    .heroInfo h1{
+        font-size: 40px;
+        position:relative;
+    }
+    .heroInfo h2, p{
+        font-size: 28px;
+        position:relative;
+    }
+    .heroInfo p{
+        padding-top: 1em;
+    }
+    .reservebtn button{
+        margin:0.5em auto 0.5em auto;
+        font-size: 20px;
+        position:relative;
+    }
+    .highlights{
+        margin:0;
+        grid-template-rows: 0.5fr 3fr;
+      }
+    .promocard{
+        flex-flow: column wrap;
+        margin:auto;
+        gap:2em
+    }
+    .promocard section{
+        width:60vw;
+    }
+    .promoheading h1{
+        font-weight: bolder;
+        font-size: 28px;
+        padding:0.5em
+    }
+    .promoheading button{
+        font-size: 20px;
+        margin-bottom:1em;
+        font-size:20px;
+    }
+    .testimonials {
+        grid-template-rows: 1fr 7fr;
+    }
+    .testicards{
+        flex-flow: column wrap;
+        gap:1em;
+        margin:auto auto 1em auto;
+    }
+    .testicards section{
+        width:60vw;
+    }
+    .about{
+      position:relative;
+      display:flex;
+      flex-flow:row wrap;
+      padding:1em;
+      }
+    .about::before {
+      content: '';
+      position:absolute;
+      inset:0;
+      background-image: url(./assets/MarioAdrianB.jpg);
+      background-repeat: repeat;
+      background-attachment:local;
+      background-position: center center;
+      background-size: cover;
+      opacity:0.4;
+    }
+    .aboutImgA,.aboutImgB {
+      width:0px;
+    }
+    .aboutInfo{
+      position:relative;
+      grid-row: 1;
+      background-color:rgba(73,94, 87, 0.4);
+      padding: 1em;
+      margin-top:5em;
+      margin-bottom:5em;
+      color:#EDEFEE;
+    }
+    .aboutInfo h1{
+      font-size: 40px;
+      color:#F4CE14
+    }
+    .aboutInfo h2{
+      font-size: 36px;
+      color:#F4CE14
+    }
+    .aboutInfo p{
+      background-color:transparent;
+      padding: 0;
+      margin:0;
+      color:#EDEFEE;
+      font-size: 18px;
+      font-weight:bold;
+    }
+      .reservePage{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+      }
+      .reserve{
+        display: flex;
+        flex-flow:column wrap;
+        position:relative;
+      }
+      .reserve::before {
+        content: '';
+        position:absolute;
+        inset:0;
+        background-image: url(./assets/restaurant.jpg);
+        background-repeat: repeat;
+        background-attachment:local;
+        background-position: center center;
+        background-size: cover;
+        opacity:0.4;
+      }
+       .reserveLeftSide h1, p{
+        font-size: 40px;
+        position:relative;
+      }
+      .reserveLeftSide >img{
+       width:0px;
+      }
+      .reserveForm{
+        position:relative;
+        margin-top:1em;
+      }
+      .loginSignup{
+        display: flex;
+        flex-direction:column;
+        padding: 1em;
+      }
+      .clientForms{
+        display: flex;
+        flex-direction:column;
+        padding:2em;
+      }
+      .login{
+        margin:3em 0 0 0;
+      }
+      .userDetailsPage{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+      }
+      .userDetails{
+        display:flex;
+        flex-flow:row wrap;
+        gap:0em;
+      }
+      .tittleRow1 h1, p{
+        font-size: 40px;
+      }
+      .bookingDetails{
+        display:flex;
+        flex-flow:row wrap;
+        gap:2em;
+      }
+      .confirmedDetails h3{
+        font-size: 20px;
+        margin-top:1em;
+        margin-bottom: 0.5em;
+      }
+      .bookingConfDetails{
+        width:100%;
+      }
+      .userDetailsForm h2{
+        margin-bottom:0em;
+      }
+      .userDetailsForm textarea{
+        width:100%
+      }
+      .payment{
+        display: flex;
+        flex-flow:column wrap;
+        padding:1em;
+      }
+      .payment h3{
+        font-size: 28px;
+      }
+      .payform{
+        padding-top:2em;
+      }
+      .footerWhite >img {
+        grid-column: 1 / span 3;
+        width:90%;
+        margin:auto;
+        padding:1em;
+      }
+      .payTitle h1,p{
+        font-size: 40px;
+      }
+      .payform h3{
+        font-size: 20px;
+      }
+    }
