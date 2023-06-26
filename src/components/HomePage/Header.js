@@ -4,7 +4,6 @@ import React from "react";
 import logo from "../../assets/logo.png"
 import AboutSection from "./AboutSection.js"
 import HighlightsSection from './HighlightsSection'
-import LoginSection from '../LoginSection';
 import {Routes, Route, Link} from 'react-router-dom';
 
 
@@ -22,11 +21,10 @@ function Header(){
             </Link>
             <nav>
                  <ul className="navbar">
-                    <Link to="/" className="nav-item" /*onMouseOver={changeBackground}*/>Home </Link>
+                    <Link to="/" className="nav-item">Home </Link>
                     <Link to="/about" className="nav-item" >About</Link>
                     <Link to="/menu" className="nav-item" >Menu</Link>
                     <Link to="/reservations" className="nav-item" >Reservations</Link>
-                    <Link to="/loginSignUp" className="nav-item" >Sign Up</Link>
                 </ul>
             </nav>
             <Routes>

@@ -590,14 +590,17 @@ button{
     border-radius: 16px;
     border-color: #EE9972;
     border-style: solid;
-    width:max-content;
+    width:50%;
+    text-align: center;
+    padding: 1em 1em;
   }
   .bookingConfDetails p {
     color: #333333;
     font-family: 'Karla';
     font-weight: lighter;
-    font-size: 18px;
+    font-size: 22px;
     padding:0.5em;
+    
   }
   .userDetailsForm{
     grid-column:2;
