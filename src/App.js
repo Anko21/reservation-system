@@ -13,7 +13,7 @@ function App() {
       <main className="container">
         <Header/>
         <Routes>
-          <Route path="/"element={<Home/>}/>
+          <Route path="/" element={<Home/>}/>
           <Route path="/reservations" element={<ReserveSection/>} />
           <Route path="/usersDetails" element={<UsersDetails/>}/>
           <Route path="/pay" element={<PaymentSection/>} />
@@ -25,3 +25,4 @@ function App() {
 
 export default App;
 
+{/* <Route path="/about" element={<AboutSection/>}/> */}

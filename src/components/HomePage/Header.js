@@ -2,7 +2,6 @@
 import '../../App'
 import React from "react";
 import logo from "../../assets/logo.png"
-import AboutSection from "./AboutSection.js"
 import HighlightsSection from './HighlightsSection'
 import {Routes, Route, Link} from 'react-router-dom';
 
@@ -22,16 +21,9 @@ function Header(){
             <nav>
                  <ul className="navbar">
                     <Link to="/" className="nav-item">Home </Link>
-                    <Link to="/about" className="nav-item" >About</Link>
-                    <Link to="/menu" className="nav-item" >Menu</Link>
                     <Link to="/reservations" className="nav-item" >Reservations</Link>
                 </ul>
             </nav>
-            <Routes>
-                  <Route path="/about" element={<AboutSection/>} />
-                  <Route path="/menu" element={<HighlightsSection/>}/>
-
-            </Routes>
         </div>
     )
 }

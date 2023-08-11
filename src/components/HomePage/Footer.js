@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook,faInstagram,faTiktok,} from "@fortawesome/free-brands-svg-icons";
 
-// main footer 
+// main footer
 function Footer(){
     const handleClick=()=>{}
 

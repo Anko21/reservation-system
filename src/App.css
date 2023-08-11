@@ -5,7 +5,7 @@
 .container {
     display: grid;
     height: 1500px;
-    grid-template-rows: 1fr 6fr 6.5fr 4.5fr 5.5fr 2fr;
+    grid-template-rows: 1fr 6fr 6.5fr 4.5fr 2fr;
     grid-auto-columns: auto;
     grid-template-areas:
     "header"
@@ -57,6 +57,19 @@
     background-color: #495E57;
     align-items: center;
     padding: 0 5em 0 5em;
+    position:relative;
+    height:38em;
+}
+.hero::before {
+  content: '';
+  position:absolute;
+  inset:0;
+  background-image: url(./assets/restaurantfood.jpg);
+  background-repeat: repeat;
+  background-attachment:local;
+  background-position: center;
+  background-size: cover;
+  opacity:0.15;
 }
 .heroInfo{
     grid-column: 1/span 5;
@@ -85,24 +98,31 @@ button{
     font-family:Karla;
     font-size: 24px;
     font-weight:bold;
+    cursor:pointer;
+}
+button:hover,
+button:focus-visible {
+  background-color: #fddc38;
 }
 .reservebtn button{
-    margin-top:0.5em;
+  margin-top:0.5em;
+  position:absolute;
 }
-.heroImg{
+/* .heroImg{
     grid-column: 6/span 6;
     width:25vw;
     border-radius:16%;
     position:relative;
     top:5em;
-}
+} */
+
 /*Highlights*****************************/
 .highlights{
     grid-area: highlights;
     display: grid;
     grid-template-rows: 1fr 3fr;
     grid-template-columns: auto;
-    margin:5em;
+    margin:1em 5em;
   }
 .promoheading{
     grid-row:1;
@@ -114,6 +134,13 @@ button{
 .promoheading h1{
     font-weight: bolder;
     font-size: 40px;
+}
+.promoheading button{
+  cursor:default;
+}
+.promoheading button:hover,
+.promoheading button:focus-visible {
+  background-color: #F4CE14;
 }
 .promocard{
     grid-row:2;
@@ -155,6 +182,11 @@ button{
     font-size: 16px;
     font-weight: bold;
     border: none;
+    cursor:default;
+}
+.promocard button:hover,
+.promocard button:focus-visible {
+  background-color: #F4CE14;
 }
 /*Testimonials********************************************/
 .testimonials {
@@ -174,10 +206,12 @@ button{
   .testicards{
     grid-row:2;
     display: flex;
-    flex-flow: row wrap;
+    /* flex-flow: row wrap; */
     justify-content: space-between;
     margin:0 5em 2em 5em;
-    gap:1em;
+    padding: 2em 0em;
+    gap:4em;
+    overflow-x: auto;
   }
   .testicards section{
     background-color: #EE9972;
@@ -185,6 +219,7 @@ button{
     padding:0.5em;
     width:20vw;
     height: fit-content;
+    position: relative;
   }
   .testititle {
     display: flex;
@@ -217,50 +252,6 @@ button{
       font-weight: bold;
       font-size:14px;
       color: #333333;
-  }
-/*~~~~~~~~~~~~ABOUT~~~~~~~~~~~*/
-.about{
-    grid-area: about;
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 1em 5em 1em 5em;
-    align-items: center;
-}
-  .aboutImg{
-    grid-column: 2;
-  }
-  .aboutImgA img {
-    width:60%;
-    border-radius:16%;
-    }
-  .aboutImgB img {
-    width:60%;
-    border-radius:16%;
-    margin-left:12em;
-    margin-top:-2em
-    }
-  .aboutInfo{
-    grid-column: 1;
-    border-radius: 16px;
-    background-color: #495E57;
-    padding: 1em;
-    margin:2em;
-    color:#EDEFEE;
-  }
-  .aboutInfo h1{
-    font-size: 40px;
-  }
-  .aboutInfo h2{
-    font-size: 36px;
-  }
-  .aboutInfo p{
-    background-color:#EDEFEE;
-    border-radius: 16px;
-    padding: 1em;
-    margin:0.5em;
-    color:#333333;
-    font-size: 18px;
-    font-weight:bold;
   }
 
  /*~~~~~~~~~~~~Footer~~~~~~~~~~~*/
@@ -375,16 +366,6 @@ button{
     font-size: 16px;
     text-align:justify;
   }
-  /* .reserveForm select:focus:invalid {
-    border: 2px solid red;
-  }
-   .reserveForm input:focus:invalid{
-     border: 2px solid red
-  }
-  .reserveForm input:not(:focus):not(:placeholder-shown):invalid{
-    border: 2px solid red
- }  */
-
   .selection select{
     border: none;
     border-radius: 16px;
@@ -423,7 +404,7 @@ button{
     }
     .footerWhite >img {
       grid-column: 1 / span 3;
-      width:40%;
+      width:30%;
       margin:auto;
       padding:1em;
     }
@@ -463,94 +444,6 @@ button{
     .footerWhitersocials a:hover{
       box-shadow: 5px 0px 5px #EE9972;
     }
-  /*~~~~~~~~~~~~Login~~~~~~~~~~~*/
-  .loginPage{
-    display:grid;
-    grid-template-rows: 3fr 1fr;
-  }
-  .loginSignup{
-    grid-row: 1;
-    display:grid;
-    grid-template-rows: 1fr 3fr;
-    background-color: #495E57;
-    padding: 2em 5em 2em 5em;
-  }
-  .loginTitle{
-    grid-row:1;
-  }
-  .loginTitle h1{
-    color: #F4CE14;
-    font-size: 64px;
-    font-weight: medium;
-  }
-  .loginTitle p{
-    color: #EDEFEE;
-    font-size: 40px;
-    font-weight: normal;
-  }
-  .clientForms{
-    grid: row 2px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  .signup{
-    grid-column: 1;
-  }
-  .loginSignup h2{
-    font-size: 20px;
-    padding-bottom:20px;
-    color: #EDEFEE;
-  }
-  .login{
-    grid-column: 2;
-    margin-left:5em;
-  }
-  .signupcouples{
-    display:flex;
-    flex-flow:row wrap;
-    gap:1em;
-    padding-bottom:1em;
-  }
-  .loginSignup label{
-    font-family: 'Karla';
-    font-weight: normal;
-    font-size: 18px;
-    color:#EDEFEE;
-  }
-  .loginSignup input{
-    border: none;
-    border-radius: 16px;
-    color: #495E57;
-    padding:0.2em;
-    font-weight: bold;
-    font-size: 16px;
-    text-align:justify;
-    margin-top:0.3em;
-  }
-
-  .loginSignup span{
-    font-family: 'Karla';
-    font-weight: bolder;
-    font-size: 18px;
-    color:#EE9972;
-
-  }
-  .loginSignup textarea{
-    border-radius: 16px;
-    color: #333333;
-    font-family:Karla;
-    font-weight: bold;
-    font-size: 16px;
-    padding:15px;
-    margin-top:15px;
-  }
-  .signLogButton{
-    font-size: 18px;
-    margin-top:1em;
-  }
-  .loginfields{
-    padding-bottom:1em;
-  }
   /*~~~~~~~~~~~~UserDetails~~~~~~~~~~~*/
   .userDetailsPage{
     display:grid;
@@ -586,12 +479,11 @@ button{
     margin-bottom: 1em;
   }
   .bookingConfDetails{
-    background-color: #FBDABB;
+    background-color: #fbe5d1;
     border-radius: 16px;
-    border-color: #EE9972;
-    border-style: solid;
-    width:50%;
-    text-align: center;
+    border-color: none;
+    width:max-content;
+    text-align: left;
     padding: 1em 1em;
   }
   .bookingConfDetails p {
@@ -600,7 +492,6 @@ button{
     font-weight: lighter;
     font-size: 22px;
     padding:0.5em;
-    
   }
   .userDetailsForm{
     grid-column:2;
@@ -719,9 +610,8 @@ button{
   .payButton{
     font-size: 18px;
     margin-top:1em;
+    cursor:pointer;
   }
-
-
 @media (max-width:920px) {
     .container {
         height: 500vh;
@@ -742,7 +632,8 @@ button{
         position:relative;
         align-items: center;
         justify-content: center;
-        padding:1em
+        padding:1em;
+        height:30em;
       }
     .hero::before {
         content: '';
@@ -762,12 +653,13 @@ button{
         font-size: 40px;
         position:relative;
     }
-    .heroInfo h2, p{
+    .heroInfo h2{
         font-size: 28px;
         position:relative;
     }
     .heroInfo p{
         padding-top: 1em;
+        font-size: 26px;
     }
     .reservebtn button{
         margin:0.5em auto 0.5em auto;
@@ -775,8 +667,8 @@ button{
         position:relative;
     }
     .highlights{
-        margin:0;
-        grid-template-rows: 0.5fr 3fr;
+        margin:1em;
+        grid-template-rows: 0.5fr 7fr;
       }
     .promocard{
         flex-flow: column wrap;
@@ -797,60 +689,22 @@ button{
         font-size:20px;
     }
     .testimonials {
-        grid-template-rows: 1fr 7fr;
-    }
+        grid-template-rows: 0.5fr 7fr;
+        height: 75em;
+      }
     .testicards{
         flex-flow: column wrap;
         gap:1em;
-        margin:auto auto 1em auto;
+        margin:0 auto 1em auto;
+        justify-content: space-between;
+        padding: 0em;
+        overflow-y: auto;
     }
     .testicards section{
         width:60vw;
     }
-    .about{
-      position:relative;
-      display:flex;
-      flex-flow:row wrap;
-      padding:1em;
-      }
-    .about::before {
-      content: '';
-      position:absolute;
-      inset:0;
-      background-image: url(./assets/MarioAdrianB.jpg);
-      background-repeat: repeat;
-      background-attachment:local;
-      background-position: center center;
-      background-size: cover;
-      opacity:0.4;
-    }
-    .aboutImgA,.aboutImgB {
-      width:0px;
-    }
-    .aboutInfo{
-      position:relative;
-      grid-row: 1;
-      background-color:rgba(73,94, 87, 0.4);
-      padding: 1em;
-      margin-top:5em;
-      margin-bottom:5em;
-      color:#EDEFEE;
-    }
-    .aboutInfo h1{
-      font-size: 40px;
-      color:#F4CE14
-    }
-    .aboutInfo h2{
-      font-size: 36px;
-      color:#F4CE14
-    }
-    .aboutInfo p{
-      background-color:transparent;
-      padding: 0;
-      margin:0;
-      color:#EDEFEE;
-      font-size: 18px;
-      font-weight:bold;
+    .footer >img {
+      width:80%;;
     }
       .reservePage{
         display: grid;
@@ -901,9 +755,7 @@ button{
         grid-template-rows: 1fr 1fr;
       }
       .userDetails{
-        display:flex;
-        flex-flow:row wrap;
-        gap:0em;
+        display:inline-block;
       }
       .tittleRow1 h1, p{
         font-size: 40px;
@@ -917,9 +769,6 @@ button{
         font-size: 20px;
         margin-top:1em;
         margin-bottom: 0.5em;
-      }
-      .bookingConfDetails{
-        width:100%;
       }
       .userDetailsForm h2{
         margin-bottom:0em;
@@ -939,10 +788,12 @@ button{
         padding-top:2em;
       }
       .footerWhite >img {
-        grid-column: 1 / span 3;
-        width:90%;
-        margin:auto;
-        padding:1em;
+        width:80%;
+        height:40%;
+      }
+      .paymentPage{
+        display:grid;
+        grid-template-rows: 1fr 1fr;
       }
       .payTitle h1,p{
         font-size: 40px;

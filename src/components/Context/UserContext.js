@@ -13,12 +13,14 @@ import { createContext, useContext,useState } from "react";
             standard:false,
             outside:false,
         })
-        const handleChange=(e)=>{
-            setValues({...values, [e.target.name]: e.target.value})
-        }
-        const radioChange=(e)=>{
-            setValues({...values, [e.target.id]: true})
-        }
+
+    const handleChange=(e)=>{
+        setValues({...values, [e.target.name]: e.target.value})
+    }
+    const radioChange=(e)=>{
+        setValues({...values, [e.target.id]: true})
+    }
+
     return (
             <UserContext.Provider value={{values,setValues, handleChange,radioChange}}>
                 {children}

@@ -2,10 +2,11 @@ import React from "react";
 import '../../App.css'
 import restaurantfood from "../../assets/restaurantfood.jpg"
 import {Link} from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 
 function HeroSection(){
-
+    const navigate=useNavigate()
     return(
     <div className="hero" id="hero">
         <div className="heroInfo">
@@ -16,17 +17,15 @@ function HeroSection(){
                 <p className="details">We are a family owned Mediterranean restaurant, focus on traditional recipes served in a modern twist.</p>
             </section>
             <div className="reservebtn">
-                <Link to="/reservations">
-                <button>Reserve a table</button>
-                </Link>
+                <button className="reservebtn" onClick={()=> navigate("/reservations")}>Reserve a table</button>
             </div>
         </div>
-             <img
+             {/* <img
              className="heroImg"
             src={restaurantfood}
             alt="Little Lemon logo"
             >
-            </img>
+            </img> */}
     </div>
     )
 }

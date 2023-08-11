@@ -6,11 +6,12 @@
     left:50%;
     transform:translate(-50%, -50%);
     background-color:#495E57;
-    padding: 1em ;
+    padding: 2em ;
     border-radius: 16px;
     border-color: #F4CE14;
     border-style: double;
     border-width: 5px;
+    width: 30%;
 }
 .overlay_style{
     position: fixed;
@@ -43,7 +44,8 @@
 }
 @media (max-width:920px) {
     .modal_style{
-        padding: 0 ;
+        padding: 1em ;
+        width: 70%;
     }
     .modal_h1{
         font-size: 24px;
