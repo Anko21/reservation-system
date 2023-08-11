@@ -18,7 +18,7 @@ export default function UsersDetails() {
         comments:"",
         })
     const [userErrors,setUserErrors]=useState({});
-    
+
     const [isSubmit,setIsSubmit]=useState(false)
 
     const handleChangeUser=(e)=>{

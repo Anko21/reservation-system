@@ -114,4 +114,4 @@ function BookingForm(props){
 export default BookingForm;
 
 //formValidation by disabling the button
-//disabled={!props.formValidation()} 
+//disabled={!props.formValidation()}

@@ -10,7 +10,6 @@ import BookingForm from './BookingForm'
 //Based on the project's requirements I used a useReducer hook to
 //manage timeslots and ensure that no double bookings will occur
 
-
     const reducer=(timeSlots,action)=>{
         switch (action.type){
           case "booked" :

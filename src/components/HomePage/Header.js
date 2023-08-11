@@ -2,10 +2,7 @@
 import '../../App'
 import React from "react";
 import logo from "../../assets/logo.png"
-import HighlightsSection from './HighlightsSection'
-import {Routes, Route, Link} from 'react-router-dom';
-
-
+import {Link} from 'react-router-dom';
 
 function Header(){
     return(
