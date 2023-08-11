@@ -102,7 +102,7 @@ function BookingForm(props){
                                 </section>
                             </div>
                         </div>
-                        <input type="submit" className="reserveformButton" value="Make your reservation" />
+                        <button type="submit" className="reserveformButton">Make your reservation</button>
                     </form>
                 </div>
             </div>
