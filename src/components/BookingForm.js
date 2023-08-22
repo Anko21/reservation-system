@@ -17,11 +17,10 @@ function BookingForm(props){
                     <h1>Find your table for any occassion</h1>
                     <form onSubmit={props.handleSubmit}>
                         <div className="selection">
+                            <label htmlFor='date' className='userDetailsForm'>Select a date*</label>
                             <input
-                            placeholder=" Date* "
-                            type="text"
+                            type="date"
                             onFocus={(e) => (e.target.type = "date")}
-                            onBlur={(e) => (e.target.type = "text")}
                             id="date"
                             name='date'
                             min={currentDate}
@@ -31,6 +30,7 @@ function BookingForm(props){
                             />
                         </div>
                         <div className="selection">
+                        <label htmlFor='date' className='userDetailsForm'>Select a time*</label>
                             <select
                             id="time"
                             name="time"
@@ -38,7 +38,7 @@ function BookingForm(props){
                             onChange={props.handleChange}
                             required
                             >
-                                <option value="" disabled selected hidden>Time*</option>
+                                <option value="" disabled selected hidden>Time</option>
                                 {props.timeSlots.map((time,index)=>(
                                     <option key={index} style={{color:"black"}}>
                                         {time}
@@ -47,6 +47,7 @@ function BookingForm(props){
                             </select>
                         </div>
                         <div className="selection">
+                        <label htmlFor='date' className='userDetailsForm'>Select a number of guests* </label>
                             <select
                             id="diners"
                             name="diners"
@@ -54,7 +55,7 @@ function BookingForm(props){
                             onChange={props.handleChange}
                             required
                             >
-                                <option value="" disabled selected hidden >Number of diners*</option>
+                                <option value="" disabled selected hidden >Number of diners</option>
                                 <option value="0-2">0-2</option>
                                 <option value="2-4">2-4</option>
                                 <option value="4-6">4-6</option>
@@ -62,6 +63,7 @@ function BookingForm(props){
                             </select>
                         </div>
                         <div className="selection">
+                        <label htmlFor='date' className='userDetailsForm'>Select the occasion*</label>
                             <select
                             id="occasion"
                             name="occasion"
@@ -69,7 +71,7 @@ function BookingForm(props){
                             onChange={props.handleChange}
                             required
                             >
-                                <option value="" disabled selected hidden >Occasion*</option>
+                                <option value="" disabled selected hidden >Occasion</option>
                                 <option value="Dinner">Dinner</option>
                                 <option value="Birthday">Birthday</option>
                                 <option value="Anniversary">Anniversary</option>

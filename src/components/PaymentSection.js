@@ -4,8 +4,10 @@ import FooterWhite from './HomePage/FooterWhite.js'
 import Modal from "./Modals/Modal";
 import BookingConfirmation from "./BookingConfirmation";
 import { useNavigate } from "react-router-dom";
+import {useUserDetailsContext} from "./Context/UserContext"
 
 function PaymentSection(){
+const {setValues}=useUserDetailsContext();
 const [cardDetails,setCardDetails]=useState({
     cardNumber:'',
     cardHolder:'',
@@ -57,6 +59,17 @@ const validate = (details) => {
     return errors;
   };
 
+  const closePortalHandler=()=>{
+    setValues({
+        date:"",
+        time:"",
+        diners:"",
+        occasion: "",
+        standard:false,
+        outside:false,
+  })
+    navigate("/")
+  }
   let currentDate = new Date().toJSON().slice(0, 10);
 
     return (
@@ -133,7 +146,7 @@ const validate = (details) => {
                                 </div>
                                 <button type="submit" className="payButton" onClick={()=>setIsOpen(true)}>Procced with the Payment</button>
                                 {(Object.keys(cardErrors).length===0 && isSubmit)?
-                                <Modal open={isOpen} onClose={()=> navigate("/")}>
+                                <Modal open={isOpen} onClose={closePortalHandler}>
                                     <BookingConfirmation/>
                                 </Modal>: null}
                             </form>
