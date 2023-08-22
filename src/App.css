@@ -98,8 +98,8 @@ button{
     font-weight:bold;
     cursor:pointer;
 }
-button:hover,
-button:focus-visible {
+.reservebtn button:hover,
+.reservebtn button:focus-visible {
   background-color: #fde676;
 }
 .reservebtn button{
@@ -134,12 +134,9 @@ button:focus-visible {
     font-weight: bolder;
     font-size: 40px;
 }
-.promoheading button{
+ .fakebtn {
   cursor:default;
-}
-.promoheading button:hover,
-.promoheading button:focus-visible {
-  background-color: #F4CE14;
+  background-color: #9e9566;
 }
 .promocard{
     grid-row:2;
@@ -183,10 +180,8 @@ button:focus-visible {
     border: none;
     cursor:default;
 }
-.promocard button:hover,
-.promocard button:focus-visible {
-  background-color: #F4CE14;
-}
+
+
 /*Testimonials********************************************/
 .testimonials {
     grid-area: testimonials;

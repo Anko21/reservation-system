@@ -39,12 +39,8 @@ function FooterWhite(){
       <div className='footerWhiteInfo'>
         <ul className="footeWhiternav">
           <li><strong>Doormat Navigation</strong></li>
-          <li><a href="." onClick={handleClick()}>Home </a></li>
-          <li><a href="/about" onClick={handleClick()}>About</a></li>
-          <li><a href="/menu" onClick={handleClick()}>Menu</a></li>
+          <li><a href="/" onClick={handleClick()}>Home </a></li>
           <li><a href="/reservations" onClick={handleClick()}>Reservations</a></li>
-          <li><a href="/onlineOrder" onClick={handleClick()}>Order Online</a></li>
-          <li><a href="/login" onClick={handleClick()} >Login</a></li>
         </ul>
         <ul className="footerWhitercontact">
           <li><strong>Contact details</strong></li>

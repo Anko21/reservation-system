@@ -29,7 +29,7 @@ function HighlightsSection(){
         <div className="highlights" id="onlineOrders">
             <div className="promoheading">
                 <h1>This Weeks specials!</h1>
-                <button>Online Menu</button>
+                <button className="fakebtn">Online Menu</button>
             </div>
             <div className="promocard">
                 {promoCards.map((promoCard)=>(
@@ -45,7 +45,7 @@ function HighlightsSection(){
                                     <h2>{promoCard.price}</h2>
                                 </div>
                                 <p>{promoCard.description}</p>
-                                <button>Order delivery <i className="fa-solid fa-bicycle"></i></button>
+                                <button className="fakebtn">Order delivery <i className="fa-solid fa-bicycle"></i></button>
                             </figcaption>
                         </figure>
                     </section>
