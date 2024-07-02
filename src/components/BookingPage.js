@@ -30,12 +30,13 @@ function BookingPage(){
         if (bookConf==="true"){
             navigate("/usersDetails")
     }}
-    const handleSubmit=(e)=>{
-       e.preventDefault();
-       dispatch({type:"booked", payload:{time:values.time}});
 
-        submitForm()
+    const handleSubmit=(e)=>{
+      e.preventDefault();
+      dispatch({type:"booked", payload:{time:values.time}});
+      submitForm()
     }
+
     return (
         <>
         <BookingForm

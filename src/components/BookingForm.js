@@ -4,6 +4,7 @@ import restaurant from '../assets/restaurant.jpg'
 
 function BookingForm(props){
     let currentDate = new Date().toJSON().slice(0, 10);
+    
     return(
         <div className="reservePage">
             <div className="reserve">

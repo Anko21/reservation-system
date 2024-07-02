@@ -7,70 +7,70 @@ import { useNavigate } from "react-router-dom";
 import {useUserDetailsContext} from "./Context/UserContext"
 
 function PaymentSection(){
-const {setValues}=useUserDetailsContext();
-const [cardDetails,setCardDetails]=useState({
-    cardNumber:'',
-    cardHolder:'',
-    ExpDate:'',
-    CVV:''
-    }
-)
-const [cardErrors,setCardErrors]=useState({});
-
-const [isSubmit,setIsSubmit]=useState(false)
-const [isOpen,setIsOpen]=useState(false)
-const navigate=useNavigate()
-
-const handleChangeCard=(e)=>{
-    setCardDetails({...cardDetails, [e.target.name]: e.target.value})
-}
-const handleSubmitCard=(e)=>{
-    e.preventDefault();
-    setCardErrors(validate(cardDetails));
-    setIsSubmit(true);
-    setCardDetails({
+    const {setValues}=useUserDetailsContext();
+    const [cardDetails,setCardDetails]=useState({
         cardNumber:'',
         cardHolder:'',
         ExpDate:'',
         CVV:''
-})
-}
+        })
+    const [cardErrors,setCardErrors]=useState({});
 
-const validate = (details) => {
-    const errors = {};
-    if (!details.cardNumber) {
-    errors.cardNumber = 'Card number is required';
-    } else if (!/^[0-9]{16}/i.test(cardDetails.cardNumber)) {
-    errors.cardNumber = 'Invalid card number';
-    }
-    if (!details.cardHolder) {
-    errors.cardHolder = 'Card holder is required';
-    }else if ((!/^[a-z ,.'-]+$/i.test(cardDetails.cardHolder))){
-    errors.cardHolder = 'Invalid name';
-    }
-    if (!details.ExpDate) {
-    errors.ExpDate = 'Expiry date is required';
-    }
-    if (!details.CVV) {
-    errors.CVV = 'CVV is required';
-    } else if (!/^[0-9]{3}/i.test(cardDetails.CVV)) {
-    errors.CVV = 'Invalid CVV';
-    }
-    return errors;
-  };
+    const [isSubmit,setIsSubmit]=useState(false)
+    const [isOpen,setIsOpen]=useState(false)
+    const navigate=useNavigate()
 
-  const closePortalHandler=()=>{
-    setValues({
-        date:"",
-        time:"",
-        diners:"",
-        occasion: "",
-        standard:false,
-        outside:false,
-  })
-    navigate("/")
-  }
-  let currentDate = new Date().toJSON().slice(0, 10);
+    const handleChangeCard=(e)=>{
+        setCardDetails({...cardDetails, [e.target.name]: e.target.value})
+    }
+    const handleSubmitCard=(e)=>{
+        e.preventDefault();
+        setCardErrors(validate(cardDetails));
+        setIsSubmit(true);
+        setCardDetails({
+            cardNumber:'',
+            cardHolder:'',
+            ExpDate:'',
+            CVV:''
+        })
+    }
+
+    const validate = (details) => {
+        const errors = {};
+        if (!details.cardNumber) {
+        errors.cardNumber = 'Card number is required';
+        } else if (!/^[0-9]{16}/i.test(cardDetails.cardNumber)) {
+        errors.cardNumber = 'Invalid card number';
+        }
+        if (!details.cardHolder) {
+        errors.cardHolder = 'Card holder is required';
+        }else if ((!/^[a-z ,.'-]+$/i.test(cardDetails.cardHolder))){
+        errors.cardHolder = 'Invalid name';
+        }
+        if (!details.ExpDate) {
+        errors.ExpDate = 'Expiry date is required';
+        }
+        if (!details.CVV) {
+        errors.CVV = 'CVV is required';
+        } else if (!/^[0-9]{3}/i.test(cardDetails.CVV)) {
+        errors.CVV = 'Invalid CVV';
+        }
+        return errors;
+    };
+
+    const closePortalHandler=()=>{
+        setValues({
+            date:"",
+            time:"",
+            diners:"",
+            occasion: "",
+            standard:false,
+            outside:false,
+        })
+        navigate("/")
+    }
+
+    let currentDate = new Date().toJSON().slice(0, 10);
 
     return (
         <div className="paymentPage">
@@ -81,7 +81,7 @@ const validate = (details) => {
                 </div>
                 <div className="paybooking">
                     <div className="payform">
-                         <form onSubmit={handleSubmitCard}>
+                        <form onSubmit={handleSubmitCard}>
                             <h3>Credit Card details</h3>
                             <div className="payfield">
                                 <label htmlFor="cardNumber">Card number * </label>
@@ -123,7 +123,7 @@ const validate = (details) => {
                                 <span>{cardErrors.ExpDate}</span><br/>
                                 </div>
                                 <div className="payfield">
-                                     <label htmlFor="CVV">CVV*</label>
+                                    <label htmlFor="CVV">CVV*</label>
                                     <input
                                     type="tel"
                                     id="CVV"
