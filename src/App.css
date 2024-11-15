@@ -14,7 +14,7 @@
     "footer";
     font-family:MarkaziText;/************/
   }
-/*Header*/
+/* Header
 .header{
     grid-area: header;
     display: inline-flex;
@@ -46,7 +46,6 @@
     color: #495E57;
     font-weight:bolder;
 }
-  /*Hero*********************************************/
 .hero{
     grid-area: hero;
     display: grid;
@@ -106,15 +105,8 @@ button{
   margin-top:0.5em;
   position:absolute;
 }
-/* .heroImg{
-    grid-column: 6/span 6;
-    width:25vw;
-    border-radius:16%;
-    position:relative;
-    top:5em;
-} */
 
-/*Highlights*****************************/
+
 .highlights{
     grid-area: highlights;
     display: grid;
@@ -182,7 +174,6 @@ button{
 }
 
 
-/*Testimonials********************************************/
 .testimonials {
     grid-area: testimonials;
     display:grid;
@@ -200,7 +191,6 @@ button{
   .testicards{
     grid-row:2;
     display: flex;
-    /* flex-flow: row wrap; */
     justify-content: space-between;
     margin:0 5em 2em 5em;
     padding: 2em 0em;
@@ -248,7 +238,6 @@ button{
       color: #333333;
   }
 
- /*~~~~~~~~~~~~Footer~~~~~~~~~~~*/
  .footer{
     grid-area: footer;
     background-color: #495E57;
@@ -301,7 +290,7 @@ button{
   }
   .footersocials a:hover{
     box-shadow: 5px 0px 5px #EE9972;
-  }
+  } */
   /*~~~~~~~~~~~~ReservationForm~~~~~~~~~~~*/
   .reservePage{
     display: grid;
@@ -388,7 +377,7 @@ button{
     font-weight:bold;
     margin-top:1em;
   }
-    /*~~~~~~~~~~~~FooterWhite~~~~~~~~~~~*/
+    /* ~~~~~~~~~~~~FooterWhite~~~~~~~~~~~
     .footerWhite{
       grid-row:2;
       display: grid;
@@ -438,7 +427,7 @@ button{
     }
     .footerWhitersocials a:hover{
       box-shadow: 5px 0px 5px #EE9972;
-    }
+    } */
   /*~~~~~~~~~~~~UserDetails~~~~~~~~~~~*/
   .userDetailsPage{
     display:grid;

@@ -1,0 +1,188 @@
+.reservePage {
+    display: flex;
+    flex-direction: column;
+    background-color: #EDEFEE;
+}
+
+.reserve {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column: 1 / -1;
+    gap: 2em;
+    position: relative;
+}
+
+.reserveLeftSide {
+    grid-column: 1 / span 6;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 2;
+
+}
+
+.reserveLeftSide h1 {
+    color: #F4CE14;
+    font-size: 64px;
+    font-weight: bold;
+}
+
+.reserveLeftSide p {
+    color: #EDEFEE;
+    font-size: 40px;
+    font-weight: normal;
+}
+
+.reserveLeftSide img {
+    width: 80%;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.reserveLeftSide #ImgA {
+    z-index: 2;
+    margin-bottom: -2em;
+}
+
+.reserveLeftSide #ImgB {
+    z-index: 1;
+    margin-top: -3em;
+}
+
+.booking-form-page {
+    grid-column: 7 / span 6;
+    padding: 2em;
+    background-color: #495E57;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    color: #EDEFEE;
+    z-index: 3;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.booking-form__title {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    color: #F4CE14;
+}
+
+.booking-form__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.booking-form__label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.booking-form__input,
+.booking-form__select {
+    border: none;
+    border-radius: 8px;
+    padding: 0.8em;
+    font-size: 16px;
+    font-weight: bold;
+    color: #495E57;
+    background-color: #EDEFEE;
+}
+
+.booking-form__input:focus,
+.booking-form__select:focus {
+    outline: 2px solid #F4CE14;
+}
+
+.booking-form__seating-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.booking-form__seating-options {
+    display: flex;
+    gap: 2em;
+}
+
+.booking-form__seating-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.booking-form__radio {
+    transform: scale(1.2);
+}
+
+.booking-form__button {
+    padding: 1em;
+    background-color: #F4CE14;
+    border: none;
+    border-radius: 8px;
+    color: #333333;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 1em;
+}
+
+.booking-form__button:hover {
+    background-color: #fde676;
+}
+
+.footeWhite {
+    grid-column: 1 / -1;
+}
+
+@media (max-width: 920px) {
+    .reservePage {
+        width:100vw;
+        height:100vh;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    .reserve {
+      grid-template-columns: 1fr;
+      gap: 1em;
+    }
+
+    .reserveLeftSide {
+      grid-column: 1 / -1;
+      align-items: center;
+      text-align: center;
+     }
+
+    .reserveLeftSide h1,
+    .reserveLeftSide p {
+      font-size: 32px;
+      text-align: center;
+    }
+    .reserveLeftSide >img {
+        display: none;
+    }
+    .booking-form-page {
+      grid-column: 1 / -1;
+      padding: 1.5em;
+    }
+
+    .booking-form__title {
+      font-size: 28px;
+    }
+
+    .booking-form__input,
+    .booking-form__select {
+      font-size: 14px;
+      padding: 0.6em;
+    }
+  }

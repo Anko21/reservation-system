@@ -1,0 +1,169 @@
+.user-details-page {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background-color: #edefee;
+  min-height: 100vh;
+}
+
+.user-details-container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 2em;
+  background-color: #495e57;
+  padding: 2em 5em;
+  border-radius: 16px;
+}
+
+.title-section {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.title-section h1 {
+  color: #f4ce14;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.title-section p {
+  color: #edefee;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.booking-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+}
+
+.booking-summary {
+  grid-column: 2;
+}
+
+.booking-summary-title {
+  color: #edefee;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.booking-details-summary {
+  background-color: #fbe5d1;
+  border-radius: 16px;
+  padding: 1em 1.5em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.booking-details-summary p {
+  color: #333333;
+  font-family: 'Karla', sans-serif;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+.user-details-form {
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  background-color: #495e57;
+  padding: 2em;
+  border-radius: 16px;
+  box-shadow: 0 -2em 2em rgba(0, 0, 0, 0.1);
+  margin-top: -2em; /* Overlap effect */
+}
+
+.user-details-form label {
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #edefee;
+  margin-bottom: 0.5em;
+}
+
+.user-details-form-fields{
+  display:flex;
+  flex-direction: column;
+  gap:0.1em;
+  margin-bottom: 0.5em;
+}
+
+.user-details-form input,
+.user-details-form textarea {
+  border: none;
+  border-radius: 8px;
+  padding: 0.8em;
+  font-size: 16px;
+  color: #495e57;
+  background-color: #edefee;
+  font-weight: bold;
+  width: 100%;
+}
+
+.user-details-form input:focus,
+.user-details-form textarea:focus {
+  outline: 2px solid #f4ce14;
+}
+
+.user-details-form textarea {
+  resize: none;
+  height: 6em;
+}
+
+.user-details-form-error {
+  font-family: 'Karla', sans-serif;
+  font-size: 14px;
+  color: #ee9972;
+  font-weight: bold;
+}
+
+.user-details-form-submit {
+  background-color: #f4ce14;
+  border: none;
+  border-radius: 8px;
+  padding: 1em;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333333;
+  cursor: pointer;
+  margin-top:1em;
+}
+
+.user-details-form-submit:hover {
+  background-color: #fde676;
+}
+
+/* Footer */
+.footer-white {
+  grid-row: 2;
+  margin-top: 2em;
+}
+
+@media (max-width: 920px) {
+  .user-details-container {
+    padding: 1em;
+    grid-template-rows: auto;
+  }
+
+  .title-section h1 {
+    font-size: 36px;
+  }
+
+  .title-section p {
+    font-size: 20px;
+  }
+
+  .booking-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+
+  .booking-summary, .user-details-form {
+    width: 80%;
+  }
+
+
+}

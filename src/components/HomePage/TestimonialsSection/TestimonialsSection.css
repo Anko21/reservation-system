@@ -1,0 +1,97 @@
+.testimonials-section {
+    grid-area: testimonials;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    background-color: #FBDABB;
+    font-family: Karla, sans-serif;
+    color: #333333;
+}
+
+.testimonials-section__title {
+    grid-row: 1;
+    font-weight: bolder;
+    font-size: 20px;
+    margin: auto;
+}
+
+.testimonials-section__cards {
+    grid-row: 2;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5em 2em 5em;
+    padding: 2em 0em;
+    gap: 4em;
+    overflow-x: auto;
+}
+
+.testimonials-section__card {
+    background-color: #EE9972;
+    border-radius: 16px;
+    padding: 0.5em;
+    width: 20vw;
+    height: fit-content;
+    position: relative;
+}
+
+.testimonials-section__card-header {
+    display: flex;
+    margin: 1em 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.testimonials-section__review-title {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.testimonials-section__stars {
+    display: flex;
+    gap: 0.2em;
+}
+
+.testimonials-section__stars img {
+    width: 1.5em;
+    height: auto;
+}
+
+.testimonials-section__customer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 1em 0;
+}
+
+.testimonials-section__customer-image {
+    width: 30%;
+    border-radius: 50%;
+}
+
+.testimonials-section__customer-name {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.testimonials-section__comment {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333333;
+    margin-top: 1em;
+}
+
+@media (max-width: 920px) {
+    .testimonials-section {
+        grid-template-rows: auto auto;
+        padding: 1em;
+      }
+
+      .testimonials-section__cards {
+        flex-direction: column;
+        gap: 1em;
+        margin: 0 auto;
+      }
+
+      .testimonials-section__card {
+        width: 90%;
+      }
+}

@@ -1,0 +1,98 @@
+.hero-section {
+    grid-area: hero;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: auto;
+    background-color: #495E57;
+    align-items: center;
+    padding: 0 5em 0 5em;
+    position: relative;
+    height: 38em;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url(../../../assets/restaurantfood.jpg);
+    background-repeat: repeat;
+    background-attachment: local;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.15;
+    pointer-events: none;
+}
+
+.hero-section__info {
+    grid-column: 1 / span 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    gap:2em;
+}
+
+.hero-section__title {
+    color: #F4CE14;
+    font-size: 64px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.hero-section__subtitle,
+.hero-section__details {
+    color: #EDEFEE;
+    font-size: 40px;
+    font-weight: normal;
+}
+
+.hero-section__details {
+    padding-top: 1em;
+}
+
+.hero-section__button-container button {
+    padding: 0.5em;
+    background-color: #F4CE14;
+    border-radius: 16px;
+    color: #333333;
+    font-family: Karla;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.hero-section__button-container button:hover,
+.hero-section__button-container button:focus-visible {
+    background-color: #fde676;
+}
+
+.hero-section__button-container {
+    margin-top: 0.5em;
+    z-index: 1;
+}
+
+.hero-section__button:focus {
+    outline: 2px solid #fde676;
+}
+
+@media (max-width: 920px) {
+    .hero-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+        height: auto;
+        padding: 2em;
+      }
+      .hero-section__info {
+        gap: 1em;
+      }
+      .hero-section__title {
+        font-size: 48px;
+      }
+      .hero-section__subtitle,
+      .hero-section__details {
+        font-size: 28px;
+      }
+      .hero-section__button-container {
+        margin: 1em auto;
+      }
+}

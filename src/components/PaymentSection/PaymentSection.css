@@ -1,0 +1,365 @@
+.payment-page {
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    background-color: #edefee;
+    min-height: 100vh;
+  }
+
+  .payment-container {
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #495e57;
+    padding: 2em 5em;
+  }
+
+  .payment-title{
+    margin-bottom: 1em;
+  }
+
+  .payment-title h1 {
+    color: #f4ce14;
+    font-size: 64px;
+    font-weight: 600;
+  }
+
+  .payment-title p {
+    color: #edefee;
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  .payment-form {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    color: #edefee;
+  }
+
+  .payment-form h3 {
+    font-size: 32px;
+    font-weight: 500;
+    margin: 0.5em 0em;
+  }
+
+  .payment-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+  }
+
+  .payment-form label {
+    font-family: 'Karla', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #edefee;
+    margin-bottom: 0.5em;
+  }
+
+  .payment-input {
+    border: none;
+    border-radius: 16px;
+    padding: 0.8em;
+    font-size: 16px;
+    color: #495e57;
+    background-color: #edefee;
+    font-weight: 600;
+    width: 100%;
+  }
+
+  .payment-input:focus {
+    outline: 2px solid #f4ce14;
+  }
+
+  .payment-error {
+    font-family: 'Karla', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ee9972;
+    margin-top: 0.5em;
+  }
+
+  .payment-cvv-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+  }
+
+  .payment-confirmation {
+    display: flex;
+    align-items: center;
+    margin-top: 1.5em;
+  }
+
+  .payment-confirmation label {
+    font-size: 16px;
+    font-weight: 400;
+    color: #edefee;
+    margin-right: 0.5em;
+  }
+
+  .payment-button {
+    background-color: #f4ce14;
+    border: none;
+    border-radius: 16px;
+    padding: 1em 2em;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333333;
+    cursor: pointer;
+    margin-top: 1.5em;
+  }
+
+  .payment-button:hover {
+    background-color: #fde676;
+  }
+
+  .footer-white {
+    grid-row: 2;
+    margin-top: 2em;
+  }
+
+  @media (max-width: 768px) {
+    .payment-container {
+      padding: 2em;
+      grid-template-rows: auto 1fr;
+    }
+
+    .payment-title h1 {
+      font-size: 48px;
+    }
+
+    .payment-title p {
+      font-size: 20px;
+    }
+
+    .payment-form h3 {
+      font-size: 28px;
+    }
+
+    .payment-input {
+      padding: 0.6em;
+      font-size: 14px;
+    }
+
+    .payment-button {
+      font-size: 16px;
+      padding: 0.8em 1.5em;
+    }
+
+    .payment-cvv-section {
+      flex-direction: column;
+      gap: 1em;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .payment-container {
+      padding: 1em;
+    }
+
+    .payment-title h1 {
+      font-size: 36px;
+    }
+
+    .payment-title p {
+      font-size: 16px;
+    }
+
+    .payment-form h3 {
+      font-size: 24px;
+    }
+
+    .payment-input {
+      padding: 0.5em;
+      font-size: 14px;
+    }
+
+    .payment-button {
+      font-size: 14px;
+      padding: 0.7em 1.2em;
+    }
+
+    .payment-cvv-section {
+      flex-direction: column;
+      gap: 1em;
+    }
+  }
+
+  .payment-page {
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    background-color: #edefee;
+    min-height: 100vh;
+  }
+
+  .payment-container {
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #495e57;
+    padding: 2em 5em;
+  }
+
+  .payment-title{
+    margin-bottom: 1em;
+  }
+
+  .payment-title h1 {
+    color: #f4ce14;
+    font-size: 64px;
+    font-weight: 600;
+  }
+
+  .payment-title p {
+    color: #edefee;
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  .payment-form {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    color: #edefee;
+  }
+
+  .payment-form h3 {
+    font-size: 32px;
+    font-weight: 500;
+    margin: 0.5em 0em;
+  }
+
+  .payment-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+  }
+
+  .payment-form label {
+    font-family: 'Karla', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #edefee;
+    margin-bottom: 0.5em;
+  }
+
+  .payment-input {
+    border: none;
+    border-radius: 16px;
+    padding: 0.8em;
+    font-size: 16px;
+    color: #495e57;
+    background-color: #edefee;
+    font-weight: 600;
+    width: 100%;
+  }
+
+  .payment-input:focus {
+    outline: 2px solid #f4ce14;
+  }
+
+  .payment-error {
+    font-family: 'Karla', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ee9972;
+    margin-top: 0.5em;
+  }
+
+  .payment-cvv-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+  }
+
+  .payment-confirmation {
+    display: flex;
+    align-items: center;
+    margin-top: 1.5em;
+  }
+
+  .payment-confirmation label {
+    font-size: 16px;
+    font-weight: 400;
+    color: #edefee;
+    margin-right: 0.5em;
+  }
+
+  .payment-button {
+    background-color: #f4ce14;
+    border: none;
+    border-radius: 16px;
+    padding: 1em 2em;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333333;
+    cursor: pointer;
+    margin-top: 1.5em;
+  }
+
+  .payment-button:hover {
+    background-color: #fde676;
+  }
+
+  .footer-white {
+    grid-row: 2;
+    margin-top: 2em;
+  }
+
+  @media (max-width: 768px) {
+    .payment-container {
+      padding: 2em;
+      grid-template-rows: auto 1fr;
+    }
+
+    .payment-title h1 {
+      font-size: 48px;
+    }
+
+    .payment-title p {
+      font-size: 20px;
+    }
+
+    .payment-form h3 {
+      font-size: 28px;
+    }
+
+    .payment-input {
+      padding: 0.6em;
+      font-size: 14px;
+    }
+
+    .payment-button {
+      font-size: 16px;
+      padding: 0.8em 1.5em;
+    }
+
+    .payment-cvv-section {
+      flex-direction: column;
+      gap: 1em;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .payment-container {
+      padding: 1em;
+      grid-template-rows: auto;
+    }
+
+    .payment-title h1 {
+      font-size: 48px;
+    }
+
+    .payment-title p {
+      font-size: 20px;
+    }
+
+    .payment-form {
+      padding-top: 1em;
+    }
+    .payment-button {
+      font-size: 16px;
+      padding: 0.8em 1.5em;
+    }
+  }

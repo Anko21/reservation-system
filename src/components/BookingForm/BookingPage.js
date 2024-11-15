@@ -1,9 +1,13 @@
-import '../App.css'
+import './BookingForm.css'
 import {useReducer} from "react";
-import {useTimesListContext } from './Context/TimeContext';
+import {useTimesListContext } from '../../Context/TimeContext.js';
 import {useNavigate } from "react-router-dom";
-import {useUserDetailsContext} from "./Context/UserContext"
-import BookingForm from './BookingForm'
+import {useUserDetailsContext} from "../../Context/UserContext.js"
+import BookingForm from './BookingForm.js'
+import FooterWhite from '../Footer/FooterWhite.js'
+import restaurantchefB from '../../assets/restaurantchefB.jpg'
+import restaurant from '../../assets/restaurant.jpg'
+
 
 
 //This component is the booking forms' state.
@@ -38,21 +42,30 @@ function BookingPage(){
     }
 
     return (
-        <>
-        <BookingForm
-        date={values.date}
-        time={values.time}
-        diners={values.diners}
-        ocassion={values.occasion}
-        standard={values.standard}
-        outside={values.outside}
-        handleChange={handleChange}
-        radioChange={radioChange}
-        handleSubmit={handleSubmit}
-        timeSlots={timeSlots}
-        dispatch={dispatch}
-        />
-        </>
+      <div className="reservePage">
+        <div className="reserve">
+          <section className="reserveLeftSide">
+              <h1>Little Lemon</h1>
+              <p>London</p>
+              <img src={restaurantchefB} id="ImgA" alt="chef cooking" ></img>
+              <img src={restaurant} id="ImgB" alt="restaurant's garden"></img>
+          </section>
+          <BookingForm
+          date={values.date}
+          time={values.time}
+          diners={values.diners}
+          ocassion={values.occasion}
+          standard={values.standard}
+          outside={values.outside}
+          handleChange={handleChange}
+          radioChange={radioChange}
+          handleSubmit={handleSubmit}
+          timeSlots={timeSlots}
+          dispatch={dispatch}
+          />
+        </div>
+        <div className="footeWhite"><FooterWhite/></div>
+        </div>
     )
 }
 
