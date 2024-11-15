@@ -1,5 +1,6 @@
-Click on this link to check Citrus Haven's reservation system !!!!
-https://benevolent-bienenstitch-915464.netlify.app
+Explore Little Lemon's Reservation System by clicking on the link below:
+https://mellow-chaja-45167d.netlify.app/
+Don't forget to check how the layout adapts seamlessly across different devices!
 
 &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  
